@@ -47,7 +47,8 @@ jobs:
       run: |
         pytest app/modules/ --ignore-glob='*selenium*'
   outdated_dependencies:
-    - name: Check outdated dependencies
+    runs-on: ubuntu-latest
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
